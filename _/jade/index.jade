@@ -1,0 +1,16 @@
+include _mixins.jade
+
+doctype html
+html(lang="es")
+  head
+    +head("Web")
+  body
+    .all
+      header.mainHeader
+        +header('index', 'index.html', '_img/src="logo.png"', 'Web')
+     
+      
+      footer
+        +footer('index')
+    
+    +scripts(['_/jquery.js', '_script.js'])

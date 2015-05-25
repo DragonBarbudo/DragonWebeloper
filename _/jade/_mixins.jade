@@ -1,0 +1,24 @@
+mixin head(titleText)
+  meta(charset="utf-8")
+  title=titleText
+  meta(name="description" content="")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+  link(rel="stylesheet", href="_/css/_style.css")
+
+
+mixin header(activePage, index, logo, name)
+    #header
+      .logo
+        a(href="http://varabal.com"): img(src="_/img/varabal.png", alt="Varabal")
+      nav.mainNav
+        ul.first
+          li: a(href="index.html", class=activePage=== "index" ? "active" : "") Inicio
+        
+
+ 
+mixin footer(activePage)
+
+mixin scripts(scr)
+  - each sc in scr
+    script(src="_/js/#{sc}")
