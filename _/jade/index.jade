@@ -1,16 +1,28 @@
-include _mixins.jade
+mixin head(titleText, links)
+  meta(charset="utf-8")
+  title=titleText
+  meta(name="description" content="")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  - each ls in links
+    link(rel="stylesheet", href=ls)
+  
+  link(rel="stylesheet", href="_/css/_style.css")
 
-doctype html
-html(lang="es")
-  head
-    +head("Web")
-  body
-    .all
-      header.mainHeader
-        +header('index', 'index.html', '_img/src="logo.png"', 'Web')
-     
-      
-      footer
-        +footer('index')
-    
-    +scripts(['_/jquery.js', '_script.js'])
+
+mixin header(activePage, logo, name, nav)
+  #header
+    .logo
+      a(href="#{nav[0][0]}.html"): img(src=logo, alt=name)
+    nav.mainNav
+      ul.first
+        -each n in nav
+          li: a(href="#{n[0]}.html", class=activePage=== "#n[0]" ? "active" : "")=n[1]
+
+
+mixin footer(activePage)
+  ul.second
+    li: a(href="index.html", class=activePage=== "index" ? "active" : "") Inicio
+
+mixin scripts(scr)
+  - each sc in scr
+    script(src="_/js/#{sc}")
