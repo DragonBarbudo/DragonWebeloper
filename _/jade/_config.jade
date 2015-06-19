@@ -3,7 +3,7 @@
 //META TAGS
 - var keywords = ""
 - var description = ""
-- var stylesheets = ['http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', 'http://fonts.googleapis.com/css?family=Oxygen:400,700,300'']
+- var stylesheets = ['http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', 'http://fonts.googleapis.com/css?family=Oxygen:400,700,300']
 - var javascripts = ['_/jquery.js', '_script.js']
 // Sitio
 - var logo = "logo.svg"
@@ -12,8 +12,8 @@
 - var menu = [['home', 'Home'], ['nosotros', 'Nosotros'], ['servicios', 'Servicios'], ['contacto', 'Contacto']]
 
 
-mixins header
-
-
+mixins header(page)
+	header
+		+navigation(page,menu)
 mixins footer
-
+	footer
