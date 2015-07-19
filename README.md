@@ -9,7 +9,29 @@ DragonWebeloper es un framework para creación de sitios web estáticos desarrol
 4.  Configurar la compilación de archivos **.jade** para que el *output* redireccione hacia ROOT en la carpeta principal. Es decir, al compilar los **.jade** dentro de **_/jade/** debe compilar los **.html** en la carpeta general del sitio.
 
 
+### Estructura
+
+.DragonWebeloper
+|-- _
+    |-- css
+        |-- _
+            |-- customs.less
+            |-- grid.less
+            |-- lesshat.less
+            |-- mediaqueries.less
+            |-- reset.less
+            |-- responsiveslides.less
+        |-- **style.less**
+        |-- **style.css**                 # Compilado desde style.less
+    |-- img
+    |-- jade
+        |-- _config.jade
+        |-- _mixins.jade
+        |-- **index.jade**
+    |-- js
+    |-- php
+|-- **index.html                          # Compilado desde index.jade
+
 ## Configuración
 
-## 
-
+##
