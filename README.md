@@ -29,7 +29,12 @@ DragonWebeloper es un framework para creación de sitios web estáticos desarrol
         |-- _mixins.jade
         |-- **index.jade**
     |-- js
+        |-- _
+            |-- jquery.js
+            |-- responsiveslides.js
+        |-- _script.js
     |-- php
+        |-- mail.php
 |-- **index.html                          # Compilado desde index.jade
 
 ## Configuración
