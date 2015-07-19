@@ -13,14 +13,24 @@ DragonWebeloper es un framework para creación de sitios web estáticos desarrol
 
 .DragonWebeloper
 |-- _
+
+
     |-- css
+
         |-- _
+
             |-- customs.less
+
             |-- grid.less
+
             |-- lesshat.less
+
             |-- mediaqueries.less
+
             |-- reset.less
+
             |-- responsiveslides.less
+
         |-- **style.less**
         |-- **style.css**                 # Compilado desde style.less
     |-- img
