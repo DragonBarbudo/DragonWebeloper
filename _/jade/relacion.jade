@@ -1,0 +1,16 @@
+include _config.jade
+include _mixins.jade
+
+ons-page.relacion
+  +ons-toolbar('Relación de envío y repeción')
+  form(action="#")
+    .m10
+      ons-row
+        ons-col: +input('folio', 'Folio')
+        ons-col: +input('remision', 'No. de remisión')
+        ons-col: +input('fecha', 'Fecha', 'date')
+    .m10
+      ons-row
+        ons-col: +input('origen', 'Origen')
+        ons-col: +input('destino', 'Destino')
+        ons-col

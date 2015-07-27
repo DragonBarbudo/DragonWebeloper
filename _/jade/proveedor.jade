@@ -1,0 +1,60 @@
+include _config.jade
+include _mixins.jade
+
+ons-page.proveedor
+  +ons-toolbar('Proveedor')
+  ons-bottom-toolbar(modifier="transparent").text-right.pageAction
+    button(type="button", onclick="alert('Enviar requerimiento');").mdl-button.mdl-js-button
+      ons-icon(icon="ion-ios-paperplane")
+      |  Guardar proveedor
+
+
+  form(action="#")
+    
+    ons-row
+      .titulo
+         ons-icon(icon="ion-ios-arrow-right")
+         |  Información
+    .m10
+      ons-row
+        ons-col: +input('remision', 'No. SCOPE')
+        ons-col: +input('fecha', 'Fecha', 'date')
+        ons-col
+      ons-row
+        ons-col: +input('nombreProveedor', 'Nombre del proveedor')
+        ons-col: +input('claveProveedor', 'Clave del proveedor')
+        ons-col: +input('contacto', 'Contacto')
+        ons-col: +input('telefono', 'Teléfono')
+      ons-row
+        ons-col: +input('comentariosProveedor', 'Comentarios')
+    ons-row
+      .titulo
+        ons-icon(icon="ion-ios-arrow-right")
+        |  Equipo
+    .m10
+      ons-row
+        ons-col: +input('nombreEquipo', 'Nombre del equipo')
+        ons-col: +input('claveEquipo', 'Clave del equipo')
+        ons-col: +input('familioEquipo', 'Familia del equipo')
+        ons-col: +input('proveedor', 'Proveedor')
+      ons-row
+        ons-col: +input('comentariosEquipo', 'Comentarios')
+    ons-row
+      .titulo
+        ons-icon(icon="ion-ios-arrow-right")
+        |  Foto / diagrama
+    
+    .m10
+      ons-row
+        ons-col.text-center
+          button.button.button--light
+            ons-icon(icon="ion-camera", style="font-size:60px;")
+            .text-center Capturar imagen
+          button.button.button--light
+            ons-icon(icon="ion-image", style="font-size:60px;")
+            .text-center Seleccionar imagen
+      ons-row
+        ons-col.text-center
+          img(src="http://placehold.it/400x400", alt="")
+          
+

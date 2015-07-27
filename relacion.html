@@ -1,0 +1,59 @@
+
+<!--META TAGS-->
+<!-- Sitio-->
+<ons-page class="relacion">
+  <ons-toolbar>
+    <div class="left">
+      <ons-toolbar-button ng-click="menu.toggleMenu()">
+        <ons-icon icon="ion-navicon"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+    <div class="center">Relación de envío y repeción</div>
+    <div class="right">
+      <ons-toolbar-button onclick="alert('sincronizando con servidor')">
+        <ons-icon icon="ion-android-sync"></ons-icon>
+      </ons-toolbar-button>
+    </div>
+  </ons-toolbar>
+  <form action="#">
+    <div class="m10">
+      <ons-row>
+        <ons-col>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input type="text" id="folio" class="mdl-textfield__input"/>
+            <label for="folio" class="mdl-textfield__label">Folio</label>
+          </div>
+        </ons-col>
+        <ons-col>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input type="text" id="remision" class="mdl-textfield__input"/>
+            <label for="remision" class="mdl-textfield__label">No. de remisión</label>
+          </div>
+        </ons-col>
+        <ons-col>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input type="date" id="fecha" class="mdl-textfield__input"/>
+            <label for="fecha" class="mdl-textfield__label">Fecha</label>
+          </div>
+        </ons-col>
+      </ons-row>
+    </div>
+    <div class="m10">
+      <ons-row>
+        <ons-col>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input type="text" id="origen" class="mdl-textfield__input"/>
+            <label for="origen" class="mdl-textfield__label">Origen</label>
+          </div>
+        </ons-col>
+        <ons-col>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input type="text" id="destino" class="mdl-textfield__input"/>
+            <label for="destino" class="mdl-textfield__label">Destino</label>
+          </div>
+        </ons-col>
+        <ons-col></ons-col>
+      </ons-row>
+    </div>
+  </form>
+</ons-page>

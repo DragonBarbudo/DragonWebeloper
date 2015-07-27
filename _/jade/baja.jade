@@ -1,0 +1,56 @@
+include _config.jade
+include _mixins.jade
+
+ons-page.baja
+  +ons-toolbar('Baja de equipo')
+  ons-bottom-toolbar(modifier="transparent").text-right.pageAction
+    button(type="button", onclick="alert('Realizar transformación');").mdl-button.mdl-js-button
+      ons-icon(icon="ion-ios-paperplane")
+      |  Enviar baja de equipo
+
+
+  form(action="#")
+    
+    ons-row
+      .titulo
+         ons-icon(icon="ion-ios-arrow-right")
+         |  Información
+    .m10
+      ons-row
+        ons-col: +input('folioSitio', 'Folio sitio')
+        ons-col: +input('folioScope', 'Folio SCOPE')
+        ons-col: +input('fecha', 'Fecha', 'date')
+      hr
+    ons-row
+      .titulo
+        ons-icon(icon="ion-ios-arrow-right")
+        |  Equipo
+    
+    ons-row
+      p.label Datos del equipo
+    .m10
+      ons-row
+        ons-col: +input('cantidad', 'Cantidad')
+        ons-col: +input('clave', 'Clave')
+        ons-col: +input('descripcion', 'Descripción de equipo')
+        ons-col: +input('motivo', 'Motivo de la baja')
+      hr
+    ons-row
+      p.label Bajas
+    .m10
+      ons-row
+        table.mdl-data-table.mdl-js-data-table
+          thead
+            tr
+              th Cantidad
+              th Clave
+              th Descripción
+              th Motivo
+              th
+          tbody
+            tr
+              td 1
+              td 1023
+              td Descripción del equipo
+              td Motivo de la baja del equipo
+              td: a(href="#"): ons-icon(icon="ion-close-round")

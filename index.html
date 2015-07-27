@@ -1,0 +1,77 @@
+
+<!--META TAGS-->
+<!-- Sitio--><!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" lang="es"/>
+    <title>SCOPE | </title>
+    <!--meta(http-equiv="Content-Security-Policy", content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *")-->
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+    <link rel="stylesheet" href=""/>
+    <link rel="stylesheet" href="_/css/_style.css"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+  </head>
+  <body>
+    <ons-sliding-menu main-page="inicio.html" menu-page="menu.html" side="left" max-slide-distance="350px" var="menu" swipe-target-width="200px"></ons-sliding-menu>
+    <ons-template id="menu.html">
+      <ons-list>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('inicio.html', {closeMenu:true});  upgrade();" class="inicio">
+          <ons-icon icon="undefined"></ons-icon> Inicio
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('requerimientos.html', {closeMenu:true});  upgrade();" class="requerimientos">
+          <ons-icon icon="ion-pull-request"></ons-icon> Requerimientos para obras
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('proveedor.html', {closeMenu:true});  upgrade();" class="proveedor">
+          <ons-icon icon="ion-ios-body"></ons-icon> Proveedor
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('transformacion.html', {closeMenu:true});  upgrade();" class="transformacion">
+          <ons-icon icon="ion-wand"></ons-icon> Transformación
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('baja.html', {closeMenu:true});  upgrade();" class="baja">
+          <ons-icon icon="ion-backspace"></ons-icon> Baja de equipo
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('inventario.html', {closeMenu:true});  upgrade();" class="inventario">
+          <ons-icon icon="ion-filing"></ons-icon> Inventario de obra
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('relacion.html', {closeMenu:true});  upgrade();" class="relacion">
+          <ons-icon icon="ion-arrow-swap"></ons-icon> Relación de envío y recepción
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('faltante.html', {closeMenu:true});  upgrade();" class="faltante">
+          <ons-icon icon="ion-help-buoy"></ons-icon> Faltante
+        </ons-list-item>
+        <ons-list-item modifier="chevron" onclick="menu.setMainPage('catalogo.html', {closeMenu:true});  upgrade();" class="catalogo">
+          <ons-icon icon="ion-images"></ons-icon> Catálogo
+        </ons-list-item>
+      </ons-list>
+    </ons-template>
+    <div class="hrcolors top">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="hrcolors bottom">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <script src="_/js/_/angular.js"></script>
+    <script src="_/js/_/jquery.js"></script>
+    <script src="_/js/_/onsenui.js"></script>
+    <script src="_/js/_/material.js"></script>
+    <script src="_/js/_script.js"></script>
+  </body>
+</html>

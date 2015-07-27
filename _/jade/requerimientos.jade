@@ -1,0 +1,67 @@
+include _config.jade
+include _mixins.jade
+
+ons-page.requerimientos
+  +ons-toolbar('Requerimientos para obras')
+  ons-bottom-toolbar(modifier="transparent").text-right.pageAction
+    button(type="button", onclick="alert('Enviar requerimiento');").mdl-button.mdl-js-button
+      ons-icon(icon="ion-ios-paperplane")
+      |  Enviar requerimiento
+
+
+  form(action="#")
+    
+    ons-row
+      .titulo
+         ons-icon(icon="ion-ios-arrow-right")
+         |  Información
+    .m10
+      ons-row
+        ons-col: +input('folio', 'Folio')
+        ons-col: +input('remision', 'No. de requerimiento SCOPE')
+        ons-col: +input('fecha', 'Fecha', 'date')
+      ons-row
+        ons-col: +input('requerimientoInicial', 'Requerimiento inicial')
+        ons-col: +input('requerimientoComplementario', 'Requerimiento complementario')
+        ons-col
+      ons-row
+        ons-col: +input('nombreSitio', 'Nombre del sitio')
+        ons-col: +input('clavesitio', 'Clave del sitio')
+        ons-col: +input('fechaEntrega', 'Fecha de entrega', 'date')
+      hr
+    ons-row
+      .titulo
+        ons-icon(icon="ion-ios-arrow-right")
+        |  Requerimientos
+    
+    ons-row
+      p.label Añadir nuevo elemento
+    .m10
+      ons-row
+        ons-col: +input('cantidad', 'Cantidad')
+        ons-col: +input('unidad', 'Unidad')
+        ons-col: +input('clave', 'Clave')
+        ons-col(width="40%"): +input('descripcion', 'Descripción')
+        ons-col.text-center
+          button(type="button").mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
+            ons-icon(icon="ion-plus-round")
+      hr
+    ons-row
+      p.label Elementos a requerir
+    .m10
+      ons-row
+        table.mdl-data-table.mdl-js-data-table
+          thead
+            tr
+              th Cantidad
+              th Unidad
+              th Clave
+              th Descripción
+              th
+          tbody
+            tr
+              td 1
+              td Cosita
+              td 19385
+              td  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis incidunt vel consequuntur.
+              td: a(href="#"): ons-icon(icon="ion-close-round")

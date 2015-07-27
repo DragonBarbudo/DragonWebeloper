@@ -1,9 +1,12 @@
 mixin head(titleText, links, keywords, description)
-  meta(charset="utf-8")
+  meta(charset="utf-8", lang="es")
   title=titleText
+  //meta(http-equiv="Content-Security-Policy", content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *")
+  meta(name="format-detection", content="telephone=no")
+  meta(name="msapplication-tap-highlight", content="no")
   meta(name="description" content=description)
   meta(name="keywords" content=keywords)
-  meta(name="viewport" content="width=device-width, initial-scale=1")
+  meta(name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width")
   - each ls in links
     link(rel="stylesheet", href=ls)  
   link(rel="stylesheet", href="_/css/_style.css")
@@ -16,15 +19,14 @@ mixin logo(logo, titulo, dominio)
 
 
 
-mixin navigation(activePage, nav)
-  ul
-    - each n in nav
-      li
-        a(href="#{n[0]}.html", class=activePage=== "#{n[0]}" ? "active" : "")=n[1]
-        if n[2]
-          ul
-            - each ni in n[2]
-              li: a(href="#{ni[0]}.html", class=activePage=== "#{ni[0]}" ? "active" : "")=ni[1]
+mixin navigation(nav)
+  ons-template(id="menu.html")
+    ons-list
+      - each n in nav
+        ons-list-item(modifier="chevron", onclick="menu.setMainPage('#{n[0]}.html', {closeMenu:true});  upgrade();", class="#{n[0]}")
+          ons-icon(icon="#{n[2]}")
+          |  #{n[1]}
+    
           
             
 
@@ -39,3 +41,4 @@ mixin navigationFooter(activePage, nav)
 mixin scripts()
   - each sc in javascripts
     script(src="_/js/#{sc}")
+    

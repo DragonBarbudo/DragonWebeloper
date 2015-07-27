@@ -1,0 +1,22 @@
+include _config.jade
+include _mixins.jade
+
+ons-navigator(title="Detalle del producto", var="catalogoDetalle")
+
+  ons-page.catalogo
+    +ons-toolbar('Catálogo')
+    nav
+      - var n = 0
+      while n<5
+        - n++
+        ons-carousel(swipeable, overscrollable, auto-scroll, item-width="240px")
+          - var m = 0
+          while m<15
+            - m++
+              ons-carousel-item
+                .nombre Nombre del producto
+                button(onclick="catalogoDetalle.pushPage('catalogo-detalle.html', { animation : 'slide' } )").mdl-button.mdl-js-button.mdl-button--fab.mdl-button--mini-fab.mdl-button--colored
+                  ons-icon(icon="ion-eye")
+                .image
+                  img(src="http://placehold.it/240x200", alt="")
+

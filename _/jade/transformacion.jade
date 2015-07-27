@@ -1,0 +1,76 @@
+include _config.jade
+include _mixins.jade
+
+ons-page.transformacion
+  +ons-toolbar('Transformación')
+  ons-bottom-toolbar(modifier="transparent").text-right.pageAction
+    button(type="button", onclick="alert('Realizar transformación');").mdl-button.mdl-js-button
+      ons-icon(icon="ion-ios-paperplane")
+      |  Realizar transformación
+
+
+  form(action="#")
+    
+    ons-row
+      .titulo
+         ons-icon(icon="ion-ios-arrow-right")
+         |  Información
+    .m10
+      ons-row
+        ons-col: +input('folioSitio', 'Folio sitio')
+        ons-col: +input('folioScope', 'Folio SCOPE')
+        ons-col: +input('fecha', 'Fecha', 'date')
+      ons-row
+        ons-col: +input('nombreSitio', 'Nombre del sitio')
+        ons-col: +input('clavesitio', 'Clave de sitio')
+        ons-col
+      hr
+    ons-row
+      .titulo
+        ons-icon(icon="ion-ios-arrow-right")
+        |  Transformación
+    
+    ons-row
+      p.label Datos del produto a transformar
+    .m10
+      ons-row
+        ons-col: +input('cantidad', 'Cantidad')
+        ons-col: +input('clave', 'Clave')
+        ons-col
+        ons-col
+     ons-row
+      p.label Datos del produto transformado
+    .m10
+      ons-row
+        ons-col: +input('cantidadTransformado', 'Cantidad')
+        ons-col: +input('claveTransformado', 'Clave') 
+        ons-col: +input('comentarioTransformado', 'Comentario') 
+        ons-col.text-center
+          button(type="button").mdl-button.mdl-js-button.mdl-button--fab.mdl-js-ripple-effect.mdl-button--colored
+            ons-icon(icon="ion-plus-round")
+      hr
+    ons-row
+      p.label Transformaciones
+    .m10
+      ons-row
+        table.mdl-data-table.mdl-js-data-table
+          thead
+            tr
+              th(colspan="2").text-center Producto origen
+              th(colspan="3").text-center Producto transformado
+              th
+            tr
+              th Cantidad
+              th Clave
+              th Cantidad
+              th Clave
+              th Descripción
+              th
+          tbody
+            tr
+              td 1
+              td 1023
+              td 1
+              td 19385
+              td  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis incidunt vel consequuntur.
+              td: a(href="#"): ons-icon(icon="ion-close-round")

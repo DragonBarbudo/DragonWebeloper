@@ -6,10 +6,16 @@ html(lang="es")
   head
     +head(titulo + " | " , stylesheets, keywords, description)
   body
-    .wrapper
-      +header('inicio')
 
+    
 
-      +footer
+    
+    +sliding-menu
+    +navigation(menu)
+    
+    +hrcolors('top')
+    +hrcolors('bottom')
+
 
     +scripts
+    
